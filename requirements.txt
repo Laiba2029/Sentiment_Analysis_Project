@@ -4,3 +4,4 @@ transformers>=4.45.0
 torch>=2.6.0
 pydantic>=2.9.0
 tokenizers>=0.20.0
+python-multipart>=0.0.9
