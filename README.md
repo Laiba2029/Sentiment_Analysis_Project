@@ -1,4 +1,4 @@
-# SentimentIQ — Setup & Deployment Guide
+# SentimentIQ 
 
 ## Project Structure
 ```
