@@ -19,10 +19,7 @@ import io
 
 app = FastAPI(title="Sentiment Analysis API", version="1.0.0")
 
-# ── CORS ─────────────────────────────────────────────────────────────────────
-# In production, replace "*" with your actual frontend URL for security, e.g.:
-#   allow_origins=["https://your-frontend.vercel.app"]
-# For development and sharing/demos, "*" is fine.
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -219,10 +216,9 @@ def health():
     return {"status": "ok", "model_loaded": True}
 
 
-# ── Entry point for deployment platforms ─────────────────────────────────────
-# Railway and Render inject a PORT environment variable.
+
 # Run locally:   uvicorn app:app --reload --port 8000
-# Deployed auto: the platform uses this block via `python app.py`
+
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))
